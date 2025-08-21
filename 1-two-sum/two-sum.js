@@ -7,7 +7,7 @@ var twoSum = function(nums, target) {
     const m = new Map()
 
     for(let i = 0; i < nums.length; i++) {
-        if(m.get(nums[i]) !== undefined) {
+        if(m.has(nums[i])) {
             return [m.get(nums[i]), i]
         }
 
