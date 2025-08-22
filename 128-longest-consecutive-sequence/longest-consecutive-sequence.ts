@@ -7,12 +7,12 @@ function longestConsecutive(nums: number[]): number {
     let curr = 1;
 
     for (let i = 1; i < nums.length; i++) {
-        if (nums[i] === nums[i - 1]) continue; // skip duplicates
+        if (nums[i] === nums[i - 1]) continue;
         if (nums[i] === nums[i - 1] + 1) {
             curr++;
             max = Math.max(max, curr);
         } else {
-            curr = 1; // reset streak
+            curr = 1;
         }
     }
 
