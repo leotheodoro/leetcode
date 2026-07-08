@@ -6,20 +6,14 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        freq = {}
-
+        seen1 = set()
         for num in nums1:
-            freq[num] = 1
+            seen1.add(num)
 
+        seen2 = set()
         for num in nums2:
-            if freq.get(num):
-                freq[num] += 1
+            seen2.add(num)
 
-        intersection = []
-        for key, val in freq.items():
-            if(val > 1):
-                intersection.append(key)
-
-        return intersection
+        return list(seen1&seen2)
         
         
