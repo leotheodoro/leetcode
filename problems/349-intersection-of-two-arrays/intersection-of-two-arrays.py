@@ -6,14 +6,6 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        seen1 = set()
-        for num in nums1:
-            seen1.add(num)
+        return list(set(nums1) & set(nums2))
 
-        seen2 = set()
-        for num in nums2:
-            seen2.add(num)
-
-        return list(seen1&seen2)
-        
         
