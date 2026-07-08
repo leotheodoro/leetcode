@@ -8,7 +8,6 @@ class Solution:
             else:
                 freq[char] = [index, 1]
 
-        print(freq)
         for value in freq.values():
             if value[1] == 1:
                 return value[0]
